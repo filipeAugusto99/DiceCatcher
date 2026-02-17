@@ -8,8 +8,10 @@
 script = ExtResource("1_p3fax")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317149803]
+position = Vector2(0, 15.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_dauee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1531758572]
+position = Vector2(0, 15.5)
 shape = ExtResource("3_53oi2")
