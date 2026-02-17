@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dqkcwymqyymme"]
+
+[ext_resource type="Texture2D" uid="uid://dwfi65sfhbmnm" path="res://Assets/Dice.png" id="1_dauee"]
+[ext_resource type="Script" uid="uid://cs55sk0d0l4gg" path="res://Scenes/Dice/Dice.gd" id="1_p3fax"]
+[ext_resource type="Shape2D" uid="uid://86u3efo24jxw" path="res://Resources/DiceCollisionShape.tres" id="3_53oi2"]
+
+[node name="Dice" type="Area2D" unique_id=1513680524]
+script = ExtResource("1_p3fax")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1317149803]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_dauee")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1531758572]
+shape = ExtResource("3_53oi2")
