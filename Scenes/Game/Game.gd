@@ -13,7 +13,7 @@ static func get_vpr() -> Rect2:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update()
-	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -22,3 +22,7 @@ func _process(delta: float) -> void:
 
 func update() -> void:
 	_vp_r = get_viewport_rect()
+
+
+func _on_dice_game_over() -> void:
+	print("Game Over")

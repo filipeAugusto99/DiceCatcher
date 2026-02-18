@@ -16,8 +16,4 @@ centered = false
 [node name="Dice" parent="." unique_id=1513680524 instance=ExtResource("2_gwu2e")]
 position = Vector2(625, 183)
 
-[node name="Dice2" parent="." unique_id=858205201 instance=ExtResource("2_gwu2e")]
-position = Vector2(986, 166)
-
-[node name="Dice3" parent="." unique_id=337106524 instance=ExtResource("2_gwu2e")]
-position = Vector2(448, 190)
+[connection signal="game_over" from="Dice" to="." method="_on_dice_game_over"]
