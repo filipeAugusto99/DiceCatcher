@@ -1,7 +1,7 @@
 extends Area2D
 
 
-class_name Dice
+class_name myDice
 
 
 # Constants
