@@ -5,8 +5,11 @@ class_name Game
 
 
 const DICE = preload("uid://dqkcwymqyymme")
-const MARGIN: float = 80.0
+const MARGIN: float = 100.0
 const STOPPABLE_GROUP: String = "stoppable"
+
+
+var _score: int = 0
 
 
 @onready var spawn_timer: Timer = $SpawnTimer
@@ -23,12 +26,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	spawn_dices()
 	update_vp()
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -66,3 +67,7 @@ func _on_dice_game_over() -> void:
 
 func _on_spawn_timer_timeout() -> void:
 	spawn_dices()
+
+
+func _on_fox_point_scored() -> void:
+	_score += 1

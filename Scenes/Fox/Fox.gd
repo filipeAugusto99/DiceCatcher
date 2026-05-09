@@ -4,10 +4,14 @@ extends Area2D
 class_name Fox
 
 
-@export var speed: float = 200.0
+signal point_scored
+
+
+@export var speed: float = 220.0
 
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var sounds: AudioStreamPlayer2D = $Sounds
 
 
 func _physics_process(delta: float) -> void:
@@ -25,3 +29,10 @@ func _physics_process(delta: float) -> void:
 		sprite_2d.flip_h = move > 0.0
 		
 	position.x += move * delta * speed
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is myDice:
+		sounds.play()
+		area.queue_free()
+		point_scored.emit()
